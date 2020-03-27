@@ -1,11 +1,12 @@
 #include <test/test.hpp>
-#include <secp256k1/libsecp256k1-config.h>
-#include <secp256k1/secp256k1.c>
+//
+#define ECMULT_WINDOW_SIZE 15
+#include <secp256k1/include/secp256k1.h>
 
 namespace eosio_test {
 
-const secp256k1_context_t* get_context() {
-  static secp256k1_context_t* ctx = secp256k1_context_create(SECP256K1_CONTEXT_VERIFY | SECP256K1_CONTEXT_SIGN);
+const secp256k1_context* get_context() {
+  static secp256k1_context* ctx = secp256k1_context_create(SECP256K1_CONTEXT_VERIFY | SECP256K1_CONTEXT_SIGN);
   return ctx;
 }
 
