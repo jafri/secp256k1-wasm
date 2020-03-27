@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "string": "cpp",
+    "secp256k1.c": "cpp",
+    "system_error": "cpp"
+  }
+}
