@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.5 )
 
-project(eosio_evm)
+project(eosio_test)
 
 set(EOSIO_WASM_OLD_BEHAVIOR "Off")
 find_package(eosio.cdt)
